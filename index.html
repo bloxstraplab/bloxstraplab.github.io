@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bloxstrap - The Premium Open-Source Roblox Bootstrapper & Customizer</title>
-    <meta name="description" content="Optimize your Roblox experience with Bloxstrap. Edit FastFlags, unlock FPS caps, enable Discord Rich Presence, and customize client files with the premier open-source bootstrapper.">
+    <meta name="description" content="Read the comprehensive technical guide for Bloxstrap, the premier open-source Roblox bootstrapper. Learn detailed installation steps, FastFlag optimization techniques, safety reviews, and advanced error fixes.">
     <meta name="keywords" content="Bloxstrap, Roblox bootstrapper, fastflag editor, fps unlocker roblox, discord rich presence roblox, custom roblox launcher">
     
     <!-- Robots Policy for SEO -->
@@ -17,7 +17,7 @@
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Bloxstrap - The Premium Open-Source Roblox Bootstrapper & Customizer">
-    <meta property="og:description" content="Optimize your Roblox experience with Bloxstrap. Edit FastFlags, unlock FPS caps, enable Discord Rich Presence, and customize client files with the premier open-source bootstrapper.">
+    <meta property="og:description" content="Read the comprehensive technical guide for Bloxstrap, the premier open-source Roblox bootstrapper. Learn detailed installation steps, FastFlag optimization techniques, safety reviews, and advanced error fixes.">
     <meta property="og:url" content="https://bloxstraplab.github.io/">
     <meta property="og:site_name" content="Bloxstrap">
     <meta property="og:image" content="https://bloxstraplab.github.io/assets/dashboard.png">
@@ -58,7 +58,8 @@
         "FPS frame rate unlocker",
         "Discord Rich Presence integration",
         "Persistent client-side modding",
-        "Multiple bootloader themes"
+        "Multiple bootloader themes",
+        "Comprehensive configuration troubleshooter"
       ],
       "author": {
         "@type": "Organization",
@@ -81,13 +82,14 @@
                 <a href="#features" class="nav-link">Features</a>
                 <a href="#simulator" class="nav-link">Simulator</a>
                 <a href="#guide" class="nav-link">Setup Guide</a>
+                <a href="#troubleshooting" class="nav-link">Troubleshooting</a>
                 <a href="#security" class="nav-link">Technical Review</a>
                 <a href="#faq" class="nav-link">FAQ</a>
             </nav>
         </div>
     </header>
 
-    <!-- Sticky Center-Top Button (Initially Hidden, slides down on scroll) -->
+    <!-- Sticky Center-Top Button -->
     <div class="sticky-download-wrapper" id="stickyBtnWrapper">
         <a href="https://exploreexecutor.blogspot.com/" target="_self" class="sticky-download-btn">
             Download Bloxstrap
@@ -242,6 +244,52 @@
                         <div class="step-num">04</div>
                         <h3>Launch & Play</h3>
                         <p>Click Play. Bloxstrap will initialize, configure the chosen FastFlags, apply custom elements, and launch the core Roblox client smoothly.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- E-E-A-T Content Gap: Common Errors & Troubleshooting -->
+        <section class="troubleshooting-section" id="troubleshooting" style="border-bottom: 1px solid var(--border-color); background: radial-gradient(circle at bottom center, rgba(16, 185, 129, 0.01) 0%, transparent 60%);">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">Diagnostics Center</span>
+                    <h2>Troubleshooting Common Bloxstrap Errors</h2>
+                    <p class="section-desc">Resolve application crashes, display failures, and configuration conflicts using these verified solutions.</p>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+                    <div class="feature-card" style="width: 100%;">
+                        <h3>Launcher Crashes on Startup / Fails to Open</h3>
+                        <p style="margin-bottom: 1rem;">If the Bloxstrap configuration menu or bootloader fails to open, it is typically caused by missing system runtime libraries or antivirus interference.</p>
+                        <p style="font-weight: 600; color: var(--green-primary);">Solution Checklist:</p>
+                        <ul style="margin-left: 1.5rem; margin-top: 0.5rem; color: var(--text-main); font-size: 0.95rem;">
+                            <li>Ensure you have the latest **.NET 6.0 Desktop Runtime (x64)** installed on your Windows system.</li>
+                            <li>Add `Bloxstrap.exe` as an exclusion in your Windows Defender or third-party antivirus whitelist settings.</li>
+                            <li>Run the installer again using full Administrator privileges.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-card" style="width: 100%;">
+                        <h3>Discord Rich Presence Not Showing Activity</h3>
+                        <p style="margin-bottom: 1rem;">If your Discord profile fails to display your active Roblox game, server details, or launch status, the integration handshake is likely blocked.</p>
+                        <p style="font-weight: 600; color: var(--blue-secondary);">Solution Checklist:</p>
+                        <ul style="margin-left: 1.5rem; margin-top: 0.5rem; color: var(--text-main); font-size: 0.95rem;">
+                            <li>Verify that "Share active game status" is enabled inside your **Discord Settings > Activity Privacy**.</li>
+                            <li>Ensure you are running the official Discord Desktop application, as web-based Discord does not support local rich presence hooks.</li>
+                            <li>Restart both Discord and Bloxstrap to re-register the IPC connection channel.</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-card" style="width: 100%; grid-column: span 2;">
+                        <h3>FastFlag Graphics Rendering Errors / Blank Screens</h3>
+                        <p style="margin-bottom: 1rem;">Applying invalid or unsupported FastFlag configurations inside the editor can result in graphic pipeline crashes, rendering failures, or blank in-game screens.</p>
+                        <p style="font-weight: 600; color: var(--mint-accent);">Solution Checklist:</p>
+                        <ul style="margin-left: 1.5rem; margin-top: 0.5rem; color: var(--text-main); font-size: 0.95rem;">
+                            <li>Open the Bloxstrap configuration panel, navigate to FastFlag Editor, and reset your custom flags back to the "Factory Default" settings.</li>
+                            <li>Check your graphic card's compatibility; forcing API parameters like Vulkan or native Direct3D 12 on outdated graphics hardware will crash the client.</li>
+                            <li>Verify that your local graphics drivers (NVIDIA, AMD, Intel) are fully updated to support custom rendering pathways.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
